@@ -25,10 +25,8 @@ const arrayFrutas = [
   <h1>Hello {{ name.toUpperCase() }}</h1>
   <h2 :style="styleColor">Soy azul</h2>
   <ul>
-    <li v-for="fruta in arrayFrutas" :key="name">
-      {{ fruta.name }}
-      {{ fruta.price }}
-      {{ fruta.desc }}
+    <li v-for="fruta in arrayFrutas" :key="fruta.name">
+      {{ fruta.name }} - {{ fruta.price }} - {{ fruta.desc }}
     </li>
   </ul>
 </template>
