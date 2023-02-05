@@ -36,7 +36,10 @@ const objetoFrutas = {
     </li>
   </ul> -->
   <ul>
-    <li v-for="fruta in arrayFrutas"></li>
+    <li v-for="(value, p) in objetoFrutas" :key="value">
+      {{ p }} :
+      {{ value }}
+    </li>
   </ul>
 </template>
 
