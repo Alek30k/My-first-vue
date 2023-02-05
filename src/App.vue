@@ -1,11 +1,17 @@
 <script setup>
 const name = "Vue dinámico";
 const styleColor = "color: blue";
+const arrayFrutas = ["🍎", "🍏", "🍍", "🍎", "🍏", "🍍"];
 </script>
 
 <template>
   <h1>Hello {{ name.toUpperCase() }}</h1>
   <h2 :style="styleColor">Soy azul</h2>
+  <ul>
+    <li v-for="fruta in arrayFrutas">
+      {{ fruta }}
+    </li>
+  </ul>
 </template>
 
 <style>
