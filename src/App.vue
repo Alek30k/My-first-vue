@@ -36,7 +36,7 @@ const objetoFrutas = {
     </li>
   </ul> -->
   <ul>
-    <li v-for="(value, propiedad, index) in objetoFrutas" :key="value">
+    <li v-for="(value, propiedad, index) in objetoFrutas" :key="index">
       {{ index }} - {{ propiedad }} :
       {{ value }}
     </li>
