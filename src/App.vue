@@ -34,7 +34,6 @@ const increment = () => {
   counter.value++;
 };
 const decrement = () => {
-  if (counter.value === 0) return;
   counter.value--;
 };
 const reset = () => {
@@ -59,7 +58,7 @@ const reset = () => {
     Activame middle
   </button> -->
 
-  <h2>{{ counter }}</h2>
+  <h2 :style="counter < 0 ? 'color: red' : 'color:green'">{{ counter }}</h2>
   <button @click="increment">Aumentar</button>
   <button @click="decrement">Disminuir</button>
   <button @click="reset">Reset</button>
