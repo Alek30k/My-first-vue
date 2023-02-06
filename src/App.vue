@@ -55,6 +55,7 @@ const classCounter = computed(() => {
 
 const bloquearBtnAdd = computed(() => {
   const numSearch = ArrayFavorite.value.find((num) => num === counter.value);
+  if (numSearch === 0) return true;
   return numSearch ? true : false;
 });
 </script>
