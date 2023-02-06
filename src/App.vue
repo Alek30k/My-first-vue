@@ -31,8 +31,7 @@ const styleColor = "color: blue";
 const counter = ref(0);
 
 const increment = () => {
-  counter++;
-  console.log(counter);
+  counter.value++;
 };
 </script>
 
