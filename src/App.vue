@@ -33,6 +33,10 @@ const counter = ref(0);
 const increment = () => {
   counter.value++;
 };
+const decrement = () => {
+  if (counter.value === 0) return;
+  counter.value--;
+};
 </script>
 
 <template>
@@ -54,6 +58,7 @@ const increment = () => {
 
   <h2>{{ counter }}</h2>
   <button @click="increment">Aumentar</button>
+  <button @click="decrement">Disminuir</button>
 </template>
 
 <style>
