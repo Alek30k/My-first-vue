@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 const name = "Vue dinámico";
 const styleColor = "color: blue";
 // const arrayFrutas = ["🍎", "🍏", "🍍", "🍎", "🍏", "🍍"];
@@ -23,8 +24,15 @@ const styleColor = "color: blue";
 
 //método - methods
 
-const handleClick = (e) => {
-  console.log(e);
+// const handleClick = (e) => {
+//   console.log(e);
+// };
+
+const counter = ref(0);
+
+const increment = () => {
+  counter++;
+  console.log(counter);
 };
 </script>
 
@@ -37,13 +45,16 @@ const handleClick = (e) => {
     </li>
   </ul> -->
 
-  <button @click.left="handleClick('text Left')">Activame left</button>
+  <!-- <button @click.left="handleClick('text Left')">Activame left</button>
   <button v-on:click.right.prevent="handleClick('text Right')">
     Activame right
   </button>
   <button v-on:click.middle="handleClick('text Middle')">
     Activame middle
-  </button>
+  </button> -->
+
+  <h2>{{ counter }}</h2>
+  <button @click="increment">Aumentar</button>
 </template>
 
 <style>
