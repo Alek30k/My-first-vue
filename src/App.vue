@@ -53,10 +53,12 @@ const classCounter = computed(() => {
   }
 });
 
-const bloquearBtnAdd = computed(() => {
+const blockNumber = computed(() => {
   const numSearch = ArrayFavorite.value.find((num) => num === counter.value);
-  if (numSearch === 0) return true;
-  return numSearch ? true : false;
+  //   if (numSearch === 0) return true;
+  //   return numSearch ? true : false;
+  //
+  return numSearch || numSearch === 0;
 });
 </script>
 
@@ -81,7 +83,7 @@ const bloquearBtnAdd = computed(() => {
   <button @click="increment">increment</button>
   <button @click="decrement">decement</button>
   <button @click="reset">Reset</button>
-  <button @click="add" :disabled="bloquearBtnAdd">Add</button>
+  <button @click="add" :disabled="blockNumber">Add</button>
   <br />
 
   <ul>
