@@ -29,6 +29,7 @@ const styleColor = "color: blue";
 // };
 
 const counter = ref(0);
+const ArrayFavorite = ref([]);
 
 const increment = () => {
   counter.value++;
@@ -38,6 +39,9 @@ const decrement = () => {
 };
 const reset = () => {
   counter.value = 0;
+};
+const add = () => {
+  ArrayFavorite.value.push(counter.value);
 };
 const classCounter = computed(() => {
   if (counter.value === 0) {
@@ -69,8 +73,18 @@ const classCounter = computed(() => {
 
   <h2 :class="classCounter">{{ counter }}</h2>
   <button @click="increment">increment</button>
-  <button @click="decrement">decrement</button>
+  <button @click="decrement">decement</button>
   <button @click="reset">Reset</button>
+  <button @click="add" :disabled="ArrayFavorite === counter ? true : false">
+    Add
+  </button>
+  <br />
+
+  <ul>
+    <li v-for="(num, index) in ArrayFavorite" :key="index">
+      {{ num }}
+    </li>
+  </ul>
 </template>
 
 <style>
