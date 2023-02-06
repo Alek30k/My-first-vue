@@ -23,8 +23,8 @@ const styleColor = "color: blue";
 
 //método - methods
 
-const handleClick = () => {
-  console.log("hiciste click");
+const handleClick = (e) => {
+  console.log(e);
 };
 </script>
 
@@ -37,8 +37,11 @@ const handleClick = () => {
     </li>
   </ul> -->
 
-  <button @click="handleClick">Activame 1</button>
-  <button v-on:click="handleClick">Activame 2</button>
+  <button @click.left="handleClick('text Left')">Activame left</button>
+  <button v-on:click.right="handleClick('text Right')">Activame right</button>
+  <button v-on:click.middle="handleClick('text Middle')">
+    Activame middle
+  </button>
 </template>
 
 <style>
