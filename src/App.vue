@@ -37,8 +37,8 @@ const handleClick = () => {
     </li>
   </ul> -->
 
-  <button @click="handleClick">Activame</button>
-  <!-- <button v-on:click="handleClick">Activame</button> -->
+  <button @click="handleClick">Activame 1</button>
+  <button v-on:click="handleClick">Activame 2</button>
 </template>
 
 <style>
