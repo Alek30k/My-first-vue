@@ -63,34 +63,40 @@ const blockNumber = computed(() => {
 </script>
 
 <template>
-  <h1>Hello {{ name.toUpperCase() }}</h1>
-  <h2 :style="styleColor">Soy azul</h2>
-  <!-- <ul>
-    <li v-for="fruta in arrayFrutas" :key="fruta.name">
-      {{ fruta.name }} - {{ fruta.price }} - {{ fruta.desc }}
-    </li>
-  </ul> -->
+  <div class="container text-center">
+    <h1>Hello {{ name.toUpperCase() }}</h1>
+    <h2 :style="styleColor">Soy azul</h2>
+    <br />
+    <!-- <ul>
+      <li v-for="fruta in arrayFrutas" :key="fruta.name">
+        {{ fruta.name }} - {{ fruta.price }} - {{ fruta.desc }}
+      </li>
+    </ul> -->
 
-  <!-- <button @click.left="handleClick('text Left')">Activame left</button>
-  <button v-on:click.right.prevent="handleClick('text Right')">
-    Activame right
-  </button>
-  <button v-on:click.middle="handleClick('text Middle')">
-    Activame middle
-  </button> -->
+    <!-- <button @click.left="handleClick('text Left')">Activame left</button>
+    <button v-on:click.right.prevent="handleClick('text Right')">
+      Activame right
+    </button>
+    <button v-on:click.middle="handleClick('text Middle')">
+      Activame middle
+    </button> -->
 
-  <h2 :class="classCounter">{{ counter }}</h2>
-  <button @click="increment">increment</button>
-  <button @click="decrement">decement</button>
-  <button @click="reset">Reset</button>
-  <button @click="add" :disabled="blockNumber">Add</button>
-  <br />
+    <h2 :class="classCounter">{{ counter }}</h2>
+    <div class="btn-group">
+      <button @click="increment" class="btn btn-success">increment</button>
+      <button @click="decrement" class="btn btn-danger">decement</button>
+      <button @click="reset" class="btn btn-secondary">Reset</button>
+      <button @click="add" :disabled="blockNumber" class="btn btn-primary">
+        Add
+      </button>
+    </div>
 
-  <ul>
-    <li v-for="(num, index) in ArrayFavorite" :key="index">
-      {{ num }}
-    </li>
-  </ul>
+    <ul>
+      <li v-for="(num, index) in ArrayFavorite" :key="index">
+        {{ num }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style>
