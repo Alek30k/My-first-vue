@@ -2,6 +2,7 @@
 const name = "Vue dinámico";
 const styleColor = "color: blue";
 // const arrayFrutas = ["🍎", "🍏", "🍍", "🍎", "🍏", "🍍"];
+
 // const arrayFrutas = [
 //   {
 //     name: "Manzana",
@@ -19,6 +20,12 @@ const styleColor = "color: blue";
 //     desc: "Una naranja",
 //   },
 // ];
+
+//método - methods
+
+const handleClick = () => {
+  console.log("hiciste click");
+};
 </script>
 
 <template>
@@ -30,7 +37,8 @@ const styleColor = "color: blue";
     </li>
   </ul> -->
 
-  <button>Activame</button>
+  <button @click="handleClick">Activame</button>
+  <!-- <button v-on:click="handleClick">Activame</button> -->
 </template>
 
 <style>
