@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 const name = "Vue dinámico";
 const styleColor = "color: blue";
 // const arrayFrutas = ["🍎", "🍏", "🍍", "🍎", "🍏", "🍍"];
@@ -39,6 +39,15 @@ const decrement = () => {
 const reset = () => {
   counter.value = 0;
 };
+const classCounter = computed(() => {
+  if (counter.value === 0) {
+    return "zero";
+  } else if (counter.value < 0) {
+    return "negative";
+  } else {
+    return "positive";
+  }
+});
 </script>
 
 <template>
@@ -58,7 +67,7 @@ const reset = () => {
     Activame middle
   </button> -->
 
-  <h2 :style="counter < 0 ? 'color: red' : 'color:green'">{{ counter }}</h2>
+  <h2 :class="classCounter">{{ counter }}</h2>
   <button @click="increment">increment</button>
   <button @click="decrement">decrement</button>
   <button @click="reset">Reset</button>
@@ -67,5 +76,15 @@ const reset = () => {
 <style>
 h1 {
   color: blueviolet;
+}
+
+.zero {
+  color: peru;
+}
+.positive {
+  color: green;
+}
+.negative {
+  color: red;
 }
 </style>
