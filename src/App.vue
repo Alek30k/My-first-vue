@@ -38,7 +38,9 @@ const handleClick = (e) => {
   </ul> -->
 
   <button @click.left="handleClick('text Left')">Activame left</button>
-  <button v-on:click.right="handleClick('text Right')">Activame right</button>
+  <button v-on:click.right.prevent="handleClick('text Right')">
+    Activame right
+  </button>
   <button v-on:click.middle="handleClick('text Middle')">
     Activame middle
   </button>
