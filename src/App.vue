@@ -29,9 +29,9 @@ const styleColor = "color: blue";
       {{ fruta.name }} - {{ fruta.price }} - {{ fruta.desc }}
     </li>
   </ul> -->
-</template>
 
-<button>Activame</button>
+  <button>Activame</button>
+</template>
 
 <style>
 h1 {
