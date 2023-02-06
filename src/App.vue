@@ -59,8 +59,8 @@ const reset = () => {
   </button> -->
 
   <h2 :style="counter < 0 ? 'color: red' : 'color:green'">{{ counter }}</h2>
-  <button @click="increment">Aumentar</button>
-  <button @click="decrement">Disminuir</button>
+  <button @click="increment">increment</button>
+  <button @click="decrement">decrement</button>
   <button @click="reset">Reset</button>
 </template>
 
