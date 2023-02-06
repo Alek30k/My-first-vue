@@ -52,6 +52,11 @@ const classCounter = computed(() => {
     return "positive";
   }
 });
+
+const bloquearBtnAdd = computed(() => {
+  const numSearch = ArrayFavorite.value.find((num) => num === counter.value);
+  return numSearch ? true : false;
+});
 </script>
 
 <template>
@@ -75,9 +80,7 @@ const classCounter = computed(() => {
   <button @click="increment">increment</button>
   <button @click="decrement">decement</button>
   <button @click="reset">Reset</button>
-  <button @click="add" :disabled="ArrayFavorite === counter ? true : false">
-    Add
-  </button>
+  <button @click="add" :disabled="bloquearBtnAdd">Add</button>
   <br />
 
   <ul>
