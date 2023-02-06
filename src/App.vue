@@ -19,12 +19,6 @@ const styleColor = "color: blue";
 //     desc: "Una naranja",
 //   },
 // ];
-const objetoFrutas = {
-  name: "Manzana",
-  price: "$1.00",
-  desc: "Una manzana",
-  id: 1,
-};
 </script>
 
 <template>
@@ -35,12 +29,6 @@ const objetoFrutas = {
       {{ fruta.name }} - {{ fruta.price }} - {{ fruta.desc }}
     </li>
   </ul> -->
-  <ul>
-    <li v-for="(value, propiedad, index) in objetoFrutas" :key="index">
-      {{ index }} - {{ propiedad }} :
-      {{ value }}
-    </li>
-  </ul>
 </template>
 
 <style>
