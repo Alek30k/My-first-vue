@@ -39,6 +39,7 @@ const decrement = () => {
 };
 const reset = () => {
   counter.value = 0;
+  ArrayFavorite.value = [];
 };
 const add = () => {
   ArrayFavorite.value.push(counter.value);
@@ -91,8 +92,12 @@ const blockNumber = computed(() => {
       </button>
     </div>
 
-    <ul>
-      <li v-for="(num, index) in ArrayFavorite" :key="index">
+    <ul class="list-group mt-4">
+      <li
+        v-for="(num, index) in ArrayFavorite"
+        :key="index"
+        class="list-group-item"
+      >
         {{ num }}
       </li>
     </ul>
