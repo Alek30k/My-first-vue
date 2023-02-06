@@ -31,6 +31,8 @@ const styleColor = "color: blue";
   </ul> -->
 </template>
 
+<button>Activame</button>
+
 <style>
 h1 {
   color: blueviolet;
